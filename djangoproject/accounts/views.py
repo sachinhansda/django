@@ -4,5 +4,5 @@ from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponse
 
 # Create your views here.
-def home(resquest):
-    return HttpResponse('Home Page!')
+def home(request):
+    return render(request, 'accounts/login.html')
