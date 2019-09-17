@@ -127,8 +127,8 @@ LOGIN_URL = '/account/login/'
 
 LOGIN_EXEMPT_URLS = (
 	r'^account/logout/$',
-	r'^account/register/$'
+	r'^account/register/$',
 )
-
+	
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025

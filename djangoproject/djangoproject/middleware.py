@@ -19,11 +19,12 @@ class LoginRequiredMiddleware:
 
 	def process_view(self, request, view_func, view_args, view_kwargs):
 		assert hasattr(request, 'user')
-		path = request.path_info.lstrip('/') 
+		path = request.path_info.lstrip('/')
+
 
 		url_is_exempt = any(url.match(path) for url in EXEMPT_URLS)
 
-		if path == 'account/logout':
+		if path == reverse('accounts:logout').lstrip('/'):
 			logout(request)
 
 		if request.user.is_authenticated() and url_is_exempt:
