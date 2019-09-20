@@ -10,10 +10,10 @@
 		<p>First Name: {{ user.first_name }}</p>
 		<p>Last Name: {{ user.last_name }}</p>
 		<p>Email: {{ user.email }}</p>
-		<p>Description: {{ user.userprofile.description }}</p>
+		<p>Description: {{ user.userprofile.decription }}</p>
 		<p>Phone: {{ user.userprofile.phone }}</p>
 		<p>City: {{ user.userprofile.city }}</p>
-		<p><img src="{{ user.profile.image.url }}"  width="240" alt=""></p>
+		<p><img src="{{ user.userprofile.image.url }}"  width="240" alt=""></p>
 	</div>
 {% endblock %}
 
