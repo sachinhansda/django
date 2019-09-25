@@ -13,13 +13,6 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-def home(request):
-    	numbers = [1,2,3,4,5]
-    	name = 'Sachin Hansda'
-
-    	args = {'myName': name, 'numbers': numbers}
-    	return render(request, 'accounts/home.html', args)
-
 
 def register(request):
 	if request.method == 'POST':
