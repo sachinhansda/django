@@ -19,7 +19,7 @@
 		<div class="col-md-4">
 			<h2>Other People</h2>
 			{% for user in users %}
-				<a href="{% url 'accounts:view_profile' %}"><h3>{{ user.username }}</h3></a>
+				<a href="{% url 'accounts:view_profile_with_pk' pk=user.pk %}"><h3>{{ user.username }}</h3></a>
 			{% endfor %}
 		</div>
 	</div>
