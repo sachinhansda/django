@@ -21,6 +21,7 @@
 			{% for user in users %}
 				<a href="{% url 'accounts:view_profile_with_pk' pk=user.pk %}"><h3>{{ user.username }}</h3></a>
 			{% endfor %}
+			<h2>Friends</h2>
 		</div>
 	</div>
 {% endblock %}

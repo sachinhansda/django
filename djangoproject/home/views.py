@@ -32,10 +32,10 @@ class HomeView(TemplateView):
 		args = {'form': form, 'text': text}
 		return render(request, self.template_name, args)
 
-	def change_friends(request, operation, pk):
-		new_friend = User.objects.get(pk=pk)
-		if operation == 'add':
-			Friend.make_friend(request.user, new_friend)
-		elif operation == 'remove':
-			Friend.lose_friend(request.user, new_friend)
-		return redirect('home:home')
+def change_friends(request, operation, pk):
+	new_friend = User.objects.get(pk=pk)
+	if operation == 'add':
+		Friend.make_friend(request.user, new_friend)
+	elif operation == 'remove':
+		Friend.lose_friend(request.user, new_friend)
+	return redirect('home:home')
